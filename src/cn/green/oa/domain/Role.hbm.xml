@@ -5,7 +5,7 @@
 
 <hibernate-mapping package="cn.green.oa.domain">
 
-	<class name="Role" table="itcast_role">
+	<class name="Role" table="greenoa_role">
 		<id name="id">
             <generator class="native"/>
 		</id>
@@ -13,13 +13,13 @@
 		<property name="description"/>
 		
 		<!-- users属性，本类与User的多对多 -->
-		<set name="users" table="itcast_user_role">
+		<set name="users" table="greenoa_user_role">
 			<key column="roleId"></key>
 			<many-to-many class="User" column="userId"></many-to-many>
 		</set>
 
 		<!-- privileges属性，本类与Privilege的多对多 -->
-		<set name="privileges" table="itcast_role_privilege" lazy="false">
+		<set name="privileges" table="greenoa_role_privilege" lazy="false">
 			<key column="roleId"></key>
 			<many-to-many class="Privilege" column="privilegeId"></many-to-many>
 		</set>

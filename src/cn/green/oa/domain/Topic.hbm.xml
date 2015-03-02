@@ -5,7 +5,7 @@
 
 <hibernate-mapping package="cn.green.oa.domain">
 
-	<class name="Topic" table="itcast_topic">
+	<class name="Topic" table="greenoa_topic">
 		<id name="id">
             <generator class="native"/>
 		</id>
